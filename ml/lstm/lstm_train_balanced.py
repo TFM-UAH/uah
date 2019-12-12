@@ -17,19 +17,7 @@ session = tf.compat.v1.Session(config=config)
 
 #Get the data and splits in input X and output Y, by spliting in `n` past days as input X
 #and `m` coming days as Y.
-def processData(data, look_back, forward_days,jump=1,  scale=True):
-    X,Y = [],[]
-    for i in range(0,len(data) -look_back -forward_days +1, jump):
-        d = data[i:i+look_back+forward_days]
-        if scale == True:
-            d = MinMaxScaler().fit_transform( d )
-        X.append(d[:look_back])
-        Y.append(d[look_back:look_back+forward_days])
-    return X, Y
-
-#Get the data and splits in input X and output Y, by spliting in `n` past days as input X
-#and `m` coming days as Y.
-def processData2(data, look_back, forward_days,jump=1, scale=True, label=False):
+def processData(data, look_back, forward_days,jump=1, scale=True, label=False):
     serie = data['ADJ_CLOSE'].values.reshape(data.shape[0],1)
     X, Y, labels = [],[],[]
     for i in range(0,len(serie) -look_back -forward_days +1, jump):
