@@ -91,8 +91,8 @@ def main():
     y = []
     actual_labels = []
     for s, group in df_train.groupby('SYMBOL'):
-        array = group['ADJ_CLOSE'].values.reshape(group.shape[0], 1)
-        X_t, y_t, labels = processData(array, look_back, forward_days, jump=num_periods)
+        #array = group['ADJ_CLOSE'].values.reshape(group.shape[0], 1)
+        X_t, y_t, labels = processData(group, look_back, forward_days, jump=num_periods)
         X = X + X_t
         y = y + y_t
         actual_labels = actual_labels + labels
