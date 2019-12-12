@@ -10,7 +10,7 @@ from google.cloud import storage
 # 2,000 calls per 10 minutes and a limit of 50,000 calls per day.
 # Authenticated users of free data feeds have a concurrency limit of one;
 # that is, they can make one call at a time and have an additional call in the queue.
-quandl.ApiConfig.api_key = "xYgQKWEhnTj62m3zFF8w"
+quandl.ApiConfig.api_key = ""
 
 # URL con la lista de stocks
 url_stocks = 'https://old.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=XXXXX&render=download'
