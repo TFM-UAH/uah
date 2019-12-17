@@ -1,5 +1,6 @@
 import argparse
-from cnn import datasets, models
+import datasets as datasets
+import models as models
 import pandas as pd
 import glob
 import tensorflow as tf
