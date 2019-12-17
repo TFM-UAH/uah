@@ -1,8 +1,8 @@
 from google.cloud import storage
-from cnn.generatorCNN import GeneratorCNN
+from generatorCNN import GeneratorCNN
 import glob
 from sklearn.model_selection import train_test_split
-from cnn import functions as func
+import functions as func
 from tqdm import tqdm
 
 
